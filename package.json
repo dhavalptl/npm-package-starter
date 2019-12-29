@@ -1,0 +1,43 @@
+{
+  "name": "npm-package-starter",
+  "version": "1.0.0",
+  "description": "Create npm package using typescript",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "build": "tsc",
+    "test": "jest --config jestconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhavalptl/npm-package-starter.git"
+  },
+  "keywords": [
+    "NPM",
+    "Typescript"
+  ],
+  "author": "Dhaval",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dhavalptl/npm-package-starter/issues"
+  },
+  "homepage": "https://github.com/dhavalptl/npm-package-starter#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.25",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.4"
+  }
+}
