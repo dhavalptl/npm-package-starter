@@ -3,6 +3,5 @@
  * @param name
  */
 export function greetings(name: string): string {
-    return `Hello ${name}`;
+  return `Hello ${name}`;
 }
-
